@@ -47,6 +47,10 @@
   margin: 5px 0 5px 0;
 }
 
+.button:hover {
+  background-color: mediumvioletred;
+}
+
 .container {
   border: var(--secondary-color) solid 4px;
   padding: 10px 10px 10px 10px;
