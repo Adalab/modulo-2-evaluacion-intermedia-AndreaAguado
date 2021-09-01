@@ -9,23 +9,20 @@ console.log(number);
 
 function handleButton () {
     console.log('estoy dentro');
-    // const number = getRandomNumber(100);
-    // console.log(number);
     console.log(input.value);
-    console.log(typeof input.value);
-    if (input.value < 1 || input.value > 100){
+    const userInput = parseInt(input.value);
+    if (userInput < 1 || userInput > 100){
         hint.innerHTML = 'El número debe estar entre 1 y 100';
     }
-    else if (input.value > number) {
+    else if (userInput > number) {
         hint.innerHTML = 'Demasiado alto';
     }
-    else if (input.value < number){
+    else if (userInput < number){
         hint.innerHTML = 'Demasiado bajo';
     }
-    else if (input.value === number){
+    else if (userInput === number){
         hint.innerHTML = 'Has ganado campeona!!!';
     }
-
 }
 
 function getRandomNumber(max) {
