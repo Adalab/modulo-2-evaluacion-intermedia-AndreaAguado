@@ -10,7 +10,8 @@ console.log('Random number generated: ' + number);
 const attempts = document.querySelector('.js_attempts');
 let cont = 0;
 
-function handleButton () {
+function handleButton (event) {
+    event.preventDefault();
     console.log('User number: ' + input.value);
     const userInput = parseInt(input.value);
     if (userInput < 1 || userInput > 100){
