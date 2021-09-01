@@ -5,14 +5,13 @@ const button = document.querySelector('.js_button');
 const hint = document.querySelector('.js_hint');
 
 const number = getRandomNumber(100);
-console.log(number);
+console.log('Random number generated: ' + number);
 
 const attempts = document.querySelector('.js_attempts');
 let cont = 0;
 
 function handleButton () {
-    console.log('estoy dentro');
-    console.log(input.value);
+    console.log('User number: ' + input.value);
     const userInput = parseInt(input.value);
     if (userInput < 1 || userInput > 100){
         hint.innerHTML = 'El número debe estar entre 1 y 100';
