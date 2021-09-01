@@ -7,6 +7,9 @@ const hint = document.querySelector('.js_hint');
 const number = getRandomNumber(100);
 console.log(number);
 
+const attempts = document.querySelector('.js_attempts');
+let cont = 0;
+
 function handleButton () {
     console.log('estoy dentro');
     console.log(input.value);
@@ -25,8 +28,14 @@ function handleButton () {
     }
 }
 
+function attempsCounter() {
+    cont ++;
+    attempts.innerHTML = 'Número de intentos: ' + cont;
+}
+
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 
 button.addEventListener('click', handleButton);
+button.addEventListener('click',attempsCounter);
