@@ -13,7 +13,10 @@
     <form class="form" action="/" method="POST"> 
         <label class="label" for="userNumber">Introduce aquí tu número:</label>
         <input placeholder="Número entre 1 y 100" class="input js_input" id="userNumber" type="text">
-        <input class="button js_button" type="submit">Prueba</input>
+        <div class="buttons-container">
+            <input class="button js_button" type="submit" value="Prueba">
+            <input class="button js_reset" type="submit" value="Reset">
+        </div>
     </form>
     <p class="container hint js_hint">Pista: Escribe el número y dale a Prueba</p>
     <p class="container attempts js_attempts">Número de intentos: 0</p>
