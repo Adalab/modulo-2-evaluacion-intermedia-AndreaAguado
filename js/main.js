@@ -51,7 +51,7 @@ function handleReset(ev){
     input.value = '';
     number = getRandomNumber(100);
     console.log('Random number generated: ' + number);
-    hint.innerHTML = 'Pista: Escribe el número y dale a Prueba'
+    hint.innerHTML = 'Pista: Escribe el número y dale a Prueba o pulsa la tecla enter'
     attempsCounter();
 }
 
@@ -60,7 +60,7 @@ function getRandomNumber(max) {
 }
 
 function handleEnter(event){
-    if (event.key === ' '){
+    if (event.key === 'Enter'){
         feedbackPainter();
     }
 }
