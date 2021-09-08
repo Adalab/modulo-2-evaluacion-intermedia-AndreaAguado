@@ -16,21 +16,26 @@ function handleButton (event) {
 }
 
 function feedbackPainter(){
-    console.log('User number: ' + input.value);
-    const userInput = parseInt(input.value);
-    if (userInput < 1 || userInput > 100){
-        hint.innerHTML = 'El número debe estar entre 1 y 100';
+    if(input.value === ''){
+        hint.innerHTML = 'Por favor introduce un número entre 1 y 100';
     }
-    else if (userInput > number) {
-        hint.innerHTML = 'Demasiado alto';
+    else {
+        console.log('User number: ' + input.value);
+        const userInput = parseInt(input.value);
+        if (userInput < 1 || userInput > 100){
+            hint.innerHTML = 'El número debe estar entre 1 y 100';
+        }
+        else if (userInput > number) {
+            hint.innerHTML = 'Demasiado alto';
+        }
+        else if (userInput < number){
+            hint.innerHTML = 'Demasiado bajo';
+        }
+        else if (userInput === number){
+            hint.innerHTML = 'Has ganado campeona!!!';
+        }
+        attempsCounter();
     }
-    else if (userInput < number){
-        hint.innerHTML = 'Demasiado bajo';
-    }
-    else if (userInput === number){
-        hint.innerHTML = 'Has ganado campeona!!!';
-    }
-    attempsCounter();
 }
 
 function attempsCounter() {
