@@ -6,7 +6,7 @@ const hint = document.querySelector('.js_hint');
 
 const resetButton = document.querySelector('.js_reset');
 
-const number = getRandomNumber(100);
+let number = getRandomNumber(100);
 console.log('Random number generated: ' + number);
 
 const attempts = document.querySelector('.js_attempts');
@@ -45,8 +45,14 @@ function attempsCounter() {
     attempts.innerHTML = 'Número de intentos: ' + cont;
 }
 
-function handleReset(){
-
+function handleReset(ev){
+    ev.preventDefault();
+    cont = -1;
+    input.value = '';
+    number = getRandomNumber(100);
+    console.log('Random number generated: ' + number);
+    hint.innerHTML = 'Pista: Escribe el número y dale a Prueba'
+    attempsCounter();
 }
 
 function getRandomNumber(max) {
