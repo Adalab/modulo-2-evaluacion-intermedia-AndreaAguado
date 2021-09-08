@@ -12,6 +12,10 @@ let cont = 0;
 
 function handleButton (event) {
     event.preventDefault();
+    feedbackPainter();
+}
+
+function feedbackPainter(){
     console.log('User number: ' + input.value);
     const userInput = parseInt(input.value);
     if (userInput < 1 || userInput > 100){
