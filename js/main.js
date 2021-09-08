@@ -30,6 +30,7 @@ function feedbackPainter(){
     else if (userInput === number){
         hint.innerHTML = 'Has ganado campeona!!!';
     }
+    attempsCounter();
 }
 
 function attempsCounter() {
@@ -42,4 +43,3 @@ function getRandomNumber(max) {
 }
 
 button.addEventListener('click', handleButton);
-button.addEventListener('click',attempsCounter);
